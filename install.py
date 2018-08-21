@@ -218,7 +218,7 @@ def _local_installation_exists(release):
         local_version = blackmamba.__version__
         _info('Black Mamba {} installed'.format(local_version))
 
-    except ImportError:
+    except ModuleNotFoundError:
         _info('Black Mamba not installed')
 
     if local_version is not None:
